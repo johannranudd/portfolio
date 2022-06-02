@@ -192,7 +192,8 @@
     width: 500px;
   }
   .projects-headline {
-    padding: 2rem;
+    margin-top: 3rem;
+    padding-bottom: 5rem;
   }
   #projects-section {
   }

@@ -35,7 +35,7 @@ function parallaxScroll(e) {
   if (window.innerWidth >= 1200) {
     emptyDiv.style.height = `${scroll}px`;
     main.style.transform = `translate3d(0px, -${scroll}px, 0px)`;
-    heroTextContainer.style.marginTop = `${scroll / 120}rem`;
+    heroTextContainer.style.marginTop = `${scroll / 300}rem`;
     images.forEach((image) => {
       const position = (window.pageYOffset * image.dataset.rate) / 3;
       image.style.transform = `translate3d(0px, ${position}px, 0px`;
