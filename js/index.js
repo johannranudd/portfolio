@@ -19,6 +19,8 @@ const aboutHeader = document.querySelector('#about-section h2');
 const aboutParagraph = document.querySelector('#about-section p');
 // tech section
 const techSection = document.querySelector('#tech-section');
+const techHeadline = document.querySelector('#tech-section h2');
+const allTechLists = document.querySelectorAll('#tech-section ul');
 const techList = document.querySelector('.tech-list');
 const wantToKnowList = document.querySelector('.want-to-know-tech-list');
 
@@ -66,18 +68,30 @@ function parallaxScroll(e) {
       aboutParagraph.classList.add('fade-in');
     }, 200);
   }
+  if (isInViewport(techSection)) {
+    console.log('in view');
+    techHeadline.classList.add('fade-in');
+    allTechLists.forEach((item) => {
+      const listItems = item.querySelectorAll('li');
+      listItems.forEach((listItem, index) => {
+        const delay = index * 100;
+        setTimeout(() => {
+          listItem.classList.add('fade-in');
+        }, delay);
+      });
+    });
+  }
 }
 
 function scrollToProjects() {
   const canvasRect = vantaCanvas.getBoundingClientRect();
-  console.log(canvasRect.height);
   if (window.innerWidth < 1200) {
     window.scroll({
       top: canvasRect.height,
     });
   } else if (window.innerWidth >= 1200) {
     window.scroll({
-      top: window.innerHeight / 2,
+      top: canvasRect.height / 2,
     });
   }
 }
