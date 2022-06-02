@@ -26,6 +26,9 @@ const techHeadline = document.querySelector('#tech-section h2');
 const allTechLists = document.querySelectorAll('#tech-section ul');
 const techList = document.querySelector('.tech-list');
 const wantToKnowList = document.querySelector('.want-to-know-tech-list');
+const innerTechSectionBorderTop = document.querySelector(
+  '.inner-section-border-top'
+);
 
 // const projectsSection = document.querySelector('#projects-section');
 const main = document.querySelector('main');
@@ -77,6 +80,7 @@ function parallaxScroll(e) {
   if (isInViewport(techList)) {
     setTimeout(() => {
       fadeIn(techHeadline);
+      fadeIn(innerTechSectionBorderTop);
       allTechLists.forEach((item) => {
         const listItems = item.querySelectorAll('li');
         listItems.forEach((listItem, index) => {
