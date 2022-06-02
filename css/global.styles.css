@@ -52,7 +52,7 @@ h2 {
   font-family: 'Poppins', sans-serif;
 }
 
-h2:after {
+/* h2:after {
   position: absolute;
   bottom: 35%;
   left: 50%;
@@ -61,7 +61,7 @@ h2:after {
   width: 300px;
   height: 3px;
   background: var(--clr-black);
-}
+} */
 
 h2,
 h2,
