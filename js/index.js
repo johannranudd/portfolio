@@ -58,32 +58,36 @@ function parallaxScroll(e) {
   //   check if element is in viewport
   if (isInViewport(projectsSection)) {
     setTimeout(() => {
-      projectsHeadline.classList.add('fade-in');
-      paragraph.classList.add('fade-in');
-      imageContainer.classList.add('fade-in');
+      fadeIn(projectsHeadline);
+      fadeIn(paragraph);
+      fadeIn(imageContainer);
     }, 200);
   }
   if (isInViewport(aboutSection)) {
     setTimeout(() => {
-      aboutImage.classList.add('fade-in');
-      aboutHeader.classList.add('fade-in');
-      aboutParagraph.classList.add('fade-in');
+      fadeIn(aboutImage);
+      fadeIn(aboutHeader);
+      fadeIn(aboutParagraph);
     }, 200);
   }
   if (isInViewport(techSection)) {
     setTimeout(() => {
-      techHeadline.classList.add('fade-in');
+      fadeIn(techHeadline);
       allTechLists.forEach((item) => {
         const listItems = item.querySelectorAll('li');
         listItems.forEach((listItem, index) => {
           const delay = index * 100;
           setTimeout(() => {
-            listItem.classList.add('fade-in');
+            fadeIn(listItem);
           }, delay);
         });
       });
     }, 200);
   }
+}
+
+function fadeIn(element) {
+  element.classList.add('fade-in');
 }
 
 function scrollToProjects() {
