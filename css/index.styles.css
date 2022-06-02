@@ -197,8 +197,15 @@ main {
 @media (min-width: 1200px) {
   .hero-text {
     padding: 0;
-    width: 500px;
+    width: 90%;
+    left: 50%;
+    transform: translate(-50%);
+    max-width: 1200px;
+    justify-content: start;
   }
+  /* .hero-text h1 {
+    width: 100%;
+  } */
   .projects-headline {
     margin-top: 3rem;
     padding-bottom: 5rem;
