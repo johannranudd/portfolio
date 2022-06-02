@@ -62,7 +62,7 @@
   opacity: 0;
   transition: 0.3s;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   grid-gap: 2rem;
 }
 .image-container .card {
@@ -100,7 +100,7 @@
     margin-left: 1rem;
   }
   .image-container .card {
-    max-width: 100%;
+    /* height: 100%; */
   }
 }
 @media (min-width: 1200px) {
