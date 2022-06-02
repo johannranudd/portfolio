@@ -3,7 +3,7 @@
   min-height: 100vh;
 }
 #vanta-canvas {
-  /* height: 100vh; */
+  height: 100vh;
 }
 .hero-text {
   position: absolute;
