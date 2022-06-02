@@ -29,6 +29,12 @@ const wantToKnowList = document.querySelector('.want-to-know-tech-list');
 const innerTechSectionBorderTop = document.querySelector(
   '.inner-section-border-top'
 );
+const aboutSectionBorderTop = document.querySelector(
+  '.about-section-border-top'
+);
+const projectSectionBorderTop = document.querySelector(
+  '.project-section-border-top'
+);
 
 // const projectsSection = document.querySelector('#projects-section');
 const main = document.querySelector('main');
@@ -65,6 +71,7 @@ function parallaxScroll(e) {
       fadeIn(projectsHeadline);
       fadeIn(paragraph);
       fadeIn(imageContainer);
+      fadeIn(projectSectionBorderTop);
     }, 200);
   }
   if (isInViewport(aboutInfo)) {
@@ -72,6 +79,7 @@ function parallaxScroll(e) {
       fadeIn(aboutImage);
       fadeIn(aboutHeader);
       fadeIn(aboutText);
+      fadeIn(aboutSectionBorderTop);
       // aboutParagraph.forEach((par) => {
       //   fadeIn(par);
       // });
@@ -100,15 +108,18 @@ function fadeIn(element) {
 
 function scrollToProjects() {
   const canvasRect = vantaCanvas.getBoundingClientRect();
-  if (window.innerWidth < 1200) {
-    window.scroll({
-      top: canvasRect.height / 2.15,
-    });
-  } else if (window.innerWidth >= 1200) {
-    window.scroll({
-      top: canvasRect.height / 2,
-    });
-  }
+  window.scroll({
+    top: canvasRect.height / 2.15,
+  });
+  // if (window.innerWidth < 1200) {
+  //   window.scroll({
+  //     top: canvasRect.height / 2.15,
+  //   });
+  // } else if (window.innerWidth >= 1200) {
+  //   window.scroll({
+  //     top: canvasRect.height / 2,
+  //   });
+  // }
 }
 
 function isInViewport(element) {
