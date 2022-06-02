@@ -81,6 +81,8 @@ button {
 }
 
 .section-center {
+  position: relative;
+
   width: 90%;
   max-width: 1200px;
   margin: auto;
