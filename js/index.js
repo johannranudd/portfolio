@@ -1,3 +1,4 @@
+const body = document.querySelector('body');
 // navbar
 const navbar = document.querySelector('.navbar');
 const sectionCenter = document.querySelectorAll('.section-center');
@@ -33,7 +34,7 @@ scrollBtn.addEventListener('click', scrollToProjects);
 
 function parallaxScroll(e) {
   const scroll = window.pageYOffset;
-
+  console.log(main.style.height);
   emptyDiv.style.height = `${scroll}px`;
   main.style.transform = `translate3d(0px, -${scroll}px, 0px)`;
   heroTextContainer.style.marginTop = `${scroll / 300}rem`;
