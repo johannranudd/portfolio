@@ -15,6 +15,7 @@ const images = imageContainer.querySelectorAll('.card');
 const projectsHeadline = document.querySelector('.projects-headline');
 // about section
 const aboutSection = document.querySelector('#about-section');
+const aboutInfo = document.querySelector('.about-info');
 const aboutImage = document.querySelector('.about-info img');
 const aboutHeader = document.querySelector('#about-section h2');
 const aboutParagraph = document.querySelector('#about-section p');
@@ -63,14 +64,14 @@ function parallaxScroll(e) {
       fadeIn(imageContainer);
     }, 200);
   }
-  if (isInViewport(aboutSection)) {
+  if (isInViewport(aboutInfo)) {
     setTimeout(() => {
       fadeIn(aboutImage);
       fadeIn(aboutHeader);
       fadeIn(aboutParagraph);
     }, 200);
   }
-  if (isInViewport(techSection)) {
+  if (isInViewport(techList)) {
     setTimeout(() => {
       fadeIn(techHeadline);
       allTechLists.forEach((item) => {

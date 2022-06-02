@@ -82,7 +82,12 @@ main {
 }
 
 .image-container .card p {
-  background: #def;
+  /* background: #def; */
+  color: var(--clr-black);
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+  margin-right: 10px;
 }
 
 .image-container .card img {
@@ -195,6 +200,8 @@ main {
   .image-container .card {
     /* height: 100%; */
   }
+  .image-container .card p {
+  }
 
   /* ***about section*** */
   .about-info {
@@ -243,7 +250,7 @@ main {
     opacity: 1;
     background: rgba(255, 255, 255, 0.35);
   }
-  .backdrop:after {
+  /* .backdrop:after {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -252,7 +259,7 @@ main {
     color: var(--clr-black);
     font-size: 2rem;
     font-weight: 600;
-  }
+  } */
 
   .image-container .card:hover {
   }
