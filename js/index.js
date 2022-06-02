@@ -34,11 +34,12 @@ scrollBtn.addEventListener('click', scrollToProjects);
 function parallaxScroll(e) {
   const scroll = window.pageYOffset;
 
+  emptyDiv.style.height = `${scroll}px`;
+  main.style.transform = `translate3d(0px, -${scroll}px, 0px)`;
+  heroTextContainer.style.marginTop = `${scroll / 300}rem`;
+
   //   add parallax
   if (window.innerWidth >= 1200) {
-    emptyDiv.style.height = `${scroll}px`;
-    main.style.transform = `translate3d(0px, -${scroll}px, 0px)`;
-    heroTextContainer.style.marginTop = `${scroll / 300}rem`;
     images.forEach((image) => {
       const position = (window.pageYOffset * image.dataset.rate) / 3;
       image.style.transform = `translate3d(0px, ${position}px, 0px`;
@@ -46,8 +47,8 @@ function parallaxScroll(e) {
   }
   //   remove parallax
   if (window.innerWidth < 1200) {
-    emptyDiv.style.height = `0px`;
-    main.style.transform = `translate3d(0px, 0px, 0px)`;
+    // emptyDiv.style.height = `0px`;
+    // main.style.transform = `translate3d(0px, 0px, 0px)`;
     images.forEach((image) => {
       image.style.transform = `translate3d(0px, 0px, 0px)`;
     });
@@ -69,7 +70,6 @@ function parallaxScroll(e) {
     }, 200);
   }
   if (isInViewport(techSection)) {
-    console.log('in view');
     techHeadline.classList.add('fade-in');
     allTechLists.forEach((item) => {
       const listItems = item.querySelectorAll('li');
@@ -87,7 +87,7 @@ function scrollToProjects() {
   const canvasRect = vantaCanvas.getBoundingClientRect();
   if (window.innerWidth < 1200) {
     window.scroll({
-      top: canvasRect.height,
+      top: canvasRect.height / 2,
     });
   } else if (window.innerWidth >= 1200) {
     window.scroll({
