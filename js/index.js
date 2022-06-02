@@ -71,16 +71,18 @@ function parallaxScroll(e) {
     }, 200);
   }
   if (isInViewport(techSection)) {
-    techHeadline.classList.add('fade-in');
-    allTechLists.forEach((item) => {
-      const listItems = item.querySelectorAll('li');
-      listItems.forEach((listItem, index) => {
-        const delay = index * 100;
-        setTimeout(() => {
-          listItem.classList.add('fade-in');
-        }, delay);
+    setTimeout(() => {
+      techHeadline.classList.add('fade-in');
+      allTechLists.forEach((item) => {
+        const listItems = item.querySelectorAll('li');
+        listItems.forEach((listItem, index) => {
+          const delay = index * 100;
+          setTimeout(() => {
+            listItem.classList.add('fade-in');
+          }, delay);
+        });
       });
-    });
+    }, 200);
   }
 }
 
