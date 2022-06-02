@@ -1,0 +1,58 @@
+{
+  "tech": [
+    {
+      "id": 1,
+      "name": "next.js",
+      "image": "./images/next-rs-crop.png",
+      "status": "experience with"
+    },
+    {
+      "id": 2,
+      "name": "React.js",
+      "image": "./images/react.png",
+      "status": "experience with"
+    },
+    {
+      "id": 3,
+      "name": "JavaScript",
+      "image": "./images/js.png",
+      "status": "experience with"
+    },
+    {
+      "id": 4,
+      "name": "CSS",
+      "image": "./images/css-rs-crop.png",
+      "status": "experience with"
+    },
+    {
+      "id": 5,
+      "name": "HTML",
+      "image": "./images/html-rs-crop.jpg",
+      "status": "experience with"
+    },
+    {
+      "id": 6,
+      "name": "UX/UI",
+      "image": "./images/figma.png",
+      "status": "experience with"
+    },
+    {
+      "id": 7,
+      "name": "WordPress",
+      "image": "./images/wp-rs-crop.jpg",
+      "status": "experience with"
+    },
+    {
+      "id": 8,
+      "name": "Node.js",
+      "image": "./images/node-rs-crop.jpg",
+      "status": "want to know"
+    },
+    {
+      "id": 9,
+      "name": "Svelte",
+      "image": "./images/svelte.png",
+      "status": "want to know"
+    }
+  ]
+}
