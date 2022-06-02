@@ -18,7 +18,8 @@ const aboutSection = document.querySelector('#about-section');
 const aboutInfo = document.querySelector('.about-info');
 const aboutImage = document.querySelector('.about-info img');
 const aboutHeader = document.querySelector('#about-section h2');
-const aboutParagraph = document.querySelector('#about-section p');
+const aboutParagraph = document.querySelectorAll('#about-section p');
+const aboutText = document.querySelector('.about-text');
 // tech section
 const techSection = document.querySelector('#tech-section');
 const techHeadline = document.querySelector('#tech-section h2');
@@ -35,10 +36,9 @@ scrollBtn.addEventListener('click', scrollToProjects);
 
 function parallaxScroll(e) {
   const scroll = window.pageYOffset;
-  console.log(main.style.height);
   emptyDiv.style.height = `${scroll}px`;
   main.style.transform = `translate3d(0px, -${scroll}px, 0px)`;
-  heroTextContainer.style.marginTop = `${scroll / 300}rem`;
+  heroTextContainer.style.marginTop = `${scroll / 200}rem`;
 
   //   add parallax
   if (window.innerWidth >= 1200) {
@@ -68,7 +68,10 @@ function parallaxScroll(e) {
     setTimeout(() => {
       fadeIn(aboutImage);
       fadeIn(aboutHeader);
-      fadeIn(aboutParagraph);
+      fadeIn(aboutText);
+      // aboutParagraph.forEach((par) => {
+      //   fadeIn(par);
+      // });
     }, 200);
   }
   if (isInViewport(techList)) {

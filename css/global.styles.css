@@ -46,9 +46,21 @@ footer {
 
 h1,
 h2 {
+  position: relative;
   text-align: center;
   padding: 3rem 0;
   font-family: 'Poppins', sans-serif;
+}
+
+h2:after {
+  position: absolute;
+  bottom: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  content: '';
+  width: 300px;
+  height: 3px;
+  background: var(--clr-black);
 }
 
 h2,
@@ -69,8 +81,11 @@ ul {
 
 a {
   text-decoration: none;
-  /* color: var(--clr-orange); */
+  color: var(--clr-black);
   display: inline-block;
+}
+p {
+  line-height: 1.6rem;
 }
 
 button {
@@ -82,8 +97,8 @@ button {
 
 .section-center {
   width: 90%;
-  max-width: 1200px;
   margin: auto;
+  max-width: 500px;
 }
 
 /* Navbar */
@@ -241,5 +256,8 @@ button {
   }
   .menu-btn {
     display: none;
+  }
+  .section-center {
+    max-width: 1200px;
   }
 }
