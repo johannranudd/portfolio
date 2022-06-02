@@ -102,7 +102,7 @@ function scrollToProjects() {
   const canvasRect = vantaCanvas.getBoundingClientRect();
   if (window.innerWidth < 1200) {
     window.scroll({
-      top: canvasRect.height / 2,
+      top: canvasRect.height / 2.15,
     });
   } else if (window.innerWidth >= 1200) {
     window.scroll({
