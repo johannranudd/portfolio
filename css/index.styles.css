@@ -1,13 +1,48 @@
 .hero-section {
+  position: relative;
   min-height: 100vh;
 }
 #vanta-canvas {
   height: 100vh;
 }
 .hero-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 5%;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-content: center;
+  /* background: rgba(0, 0, 0, 0.258); */
+  color: var(--clr-white);
+}
+.hero-text h1 {
+  font-size: 3rem;
+  padding: 0;
+  text-align: left;
 }
 .empty-div {
   height: 0;
+}
+
+.empty-div {
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: var(--clr-white);
+}
+
+.scroll-btn-container {
+  position: relative;
+  top: -100px;
+  display: flex;
+  justify-content: center;
+}
+.scroll-btn {
+  font-size: 1.5rem;
+  color: var(--clr-white);
 }
 
 @media (min-width: 400px) {
@@ -15,4 +50,14 @@
 @media (min-width: 768px) {
 }
 @media (min-width: 1200px) {
+  main {
+    min-height: 0px;
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    width: 100%;
+    margin: auto;
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+  }
 }
