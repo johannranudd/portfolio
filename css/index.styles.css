@@ -154,7 +154,7 @@ main {
   display: block;
   position: absolute;
   top: 0;
-  width: 50%;
+  width: 60%;
   left: 0;
   border-top: 2px solid black;
 }
@@ -205,16 +205,18 @@ main {
 .tech-list {
   display: grid;
   place-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-gap: 2rem;
 }
 
 .want-to-know-tech-list {
-  display: flex;
-  gap: 2.3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  /* gap: 2.3rem; */
+  max-width: 350px;
 }
 .want-to-know-tech-list img {
-  max-width: 130px;
+  max-width: 100px;
 }
 
 /* ***animation** */
