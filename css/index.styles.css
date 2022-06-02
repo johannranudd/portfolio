@@ -133,10 +133,10 @@
     /* height: 100%; */
   }
   /* ***about section*** */
-  .about-info {
+  /* .about-info {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
-  }
+  } */
 }
 @media (min-width: 1200px) {
   main {
