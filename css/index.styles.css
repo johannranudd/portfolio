@@ -1,0 +1,17 @@
+.hero-section {
+  min-height: 100vh;
+}
+#vanta-canvas {
+}
+.hero-text {
+}
+.empty-div {
+  height: 0;
+}
+
+@media (min-width: 400px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 1200px) {
+}
