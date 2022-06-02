@@ -2,6 +2,7 @@
 const navbar = document.querySelector('.navbar');
 const sectionCenter = document.querySelectorAll('.section-center');
 // hero section
+const vantaCanvas = document.querySelector('#vanta-canvas');
 const emptyDiv = document.querySelector('.empty-div');
 const scrollBtn = document.querySelector('.scroll-btn');
 const heroTextContainer = document.querySelector('.hero-text');
@@ -68,9 +69,11 @@ function parallaxScroll(e) {
 }
 
 function scrollToProjects() {
+  const canvasRect = vantaCanvas.getBoundingClientRect();
+  console.log(canvasRect.height);
   if (window.innerWidth < 1200) {
     window.scroll({
-      top: window.innerHeight,
+      top: canvasRect.height,
     });
   } else if (window.innerWidth >= 1200) {
     window.scroll({
