@@ -60,4 +60,8 @@
     /* left: 50%; */
     /* transform: translateX(-50%); */
   }
+  .hero-text {
+    padding: 0;
+    width: 500px;
+  }
 }
