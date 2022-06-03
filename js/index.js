@@ -231,7 +231,7 @@ function scrollToElement(e) {
   //     html.offsetHeight
   //   );
   // console.log(height);
-  const doc20PercentOfHeight = document.body.scrollHeight * 0.18;
+  const doc20PercentOfHeight = document.body.scrollHeight * 0.15;
   const doc50PercentOfHeight = document.body.scrollHeight * 0.5;
   const doc65PercentOfHeight = document.body.scrollHeight * 0.65;
 
