@@ -189,7 +189,7 @@ links.forEach((link) => {
 
       if (window.innerWidth > 340) {
         window.scroll({
-          top: elemPosition - window.pageYOffset - elemOffset / 2.47,
+          top: elemPosition - window.pageYOffset - elemOffset / 2.46,
         });
       }
       if (window.innerWidth > 400) {
