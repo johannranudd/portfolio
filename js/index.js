@@ -115,11 +115,7 @@ function scrollToProjects() {
   window.scroll({
     top: canvasRect.height / 2.15,
   });
-  // if (window.innerWidth > 768) {
-  //   window.scroll({
-  //     top: canvasRect.height / 2.15,
-  //   });
-  // }
+
   // else {
   //   window.scroll({
   //     top: canvasRect.height / 2.2,
