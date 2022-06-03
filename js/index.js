@@ -13,6 +13,9 @@ const paragraph = document.querySelector('.paragraph');
 const imageContainer = document.querySelector('.image-container');
 const images = imageContainer.querySelectorAll('.card');
 const projectsHeadline = document.querySelector('.projects-headline');
+const projectSectionBorderTop = document.querySelector(
+  '.project-section-border-top'
+);
 // about section
 const aboutSection = document.querySelector('#about-section');
 const aboutInfo = document.querySelector('.about-info');
@@ -20,6 +23,9 @@ const aboutImage = document.querySelector('.about-info img');
 const aboutHeader = document.querySelector('#about-section h2');
 const aboutParagraph = document.querySelectorAll('#about-section p');
 const aboutText = document.querySelector('.about-text');
+const aboutSectionBorderTop = document.querySelector(
+  '.about-section-border-top'
+);
 // tech section
 const techSection = document.querySelector('#tech-section');
 const techHeadline = document.querySelector('#tech-section h2');
@@ -29,12 +35,7 @@ const wantToKnowList = document.querySelector('.want-to-know-tech-list');
 const innerTechSectionBorderTop = document.querySelector(
   '.inner-section-border-top'
 );
-const aboutSectionBorderTop = document.querySelector(
-  '.about-section-border-top'
-);
-const projectSectionBorderTop = document.querySelector(
-  '.project-section-border-top'
-);
+const techSectionH3 = document.querySelectorAll('#tech-section h3');
 
 // const projectsSection = document.querySelector('#projects-section');
 const main = document.querySelector('main');
@@ -89,6 +90,10 @@ function parallaxScroll(e) {
     setTimeout(() => {
       fadeIn(techHeadline);
       fadeIn(innerTechSectionBorderTop);
+      techSectionH3.forEach((h3) => {
+        fadeIn(h3);
+        // console.log(h3);
+      });
       allTechLists.forEach((item) => {
         const listItems = item.querySelectorAll('li');
         listItems.forEach((listItem, index) => {
