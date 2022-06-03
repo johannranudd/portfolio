@@ -92,7 +92,6 @@ function parallaxScroll(e) {
       fadeIn(innerTechSectionBorderTop);
       techSectionH3.forEach((h3) => {
         fadeIn(h3);
-        // console.log(h3);
       });
       allTechLists.forEach((item) => {
         const listItems = item.querySelectorAll('li');
@@ -113,18 +112,16 @@ function fadeIn(element) {
 
 function scrollToProjects() {
   const canvasRect = vantaCanvas.getBoundingClientRect();
-  window.scroll({
-    top: canvasRect.height / 2.15,
-  });
-  // if (window.innerWidth < 1200) {
-  //   window.scroll({
-  //     top: canvasRect.height / 2.15,
-  //   });
-  // } else if (window.innerWidth >= 1200) {
-  //   window.scroll({
-  //     top: canvasRect.height / 2,
-  //   });
-  // }
+
+  if (window.innerWidth > 768) {
+    window.scroll({
+      top: canvasRect.height / 2.15,
+    });
+  } else {
+    window.scroll({
+      top: canvasRect.height / 2.3,
+    });
+  }
 }
 
 function isInViewport(element) {
