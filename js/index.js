@@ -85,9 +85,6 @@ function parallaxScroll(e) {
       fadeIn(aboutHeader);
       fadeIn(aboutText);
       fadeIn(aboutSectionBorderTop);
-      // aboutParagraph.forEach((par) => {
-      //   fadeIn(par);
-      // });
     }, 200);
   }
   if (isInViewport(techList)) {
@@ -136,7 +133,7 @@ links.forEach((link) => {
       });
     }
 
-    if (link.className === 'projects') {
+    if (link.className.includes('projects')) {
       scrollToProjects();
     }
     if (link.className.includes('about')) {
@@ -222,7 +219,8 @@ links.forEach((link) => {
   });
 });
 
-function scrollToElement(elem) {
+window.addEventListener('scroll', scrollToElement);
+function scrollToElement(e) {
   // let body = document.body,
   //   html = document.documentElement,
   //   height = Math.max(
@@ -233,18 +231,38 @@ function scrollToElement(elem) {
   //     html.offsetHeight
   //   );
   // console.log(height);
-  // window.scroll({
-  //   top: elemPosition - window.pageYOffset * 15,
-  // });
-  // window.scrollTo(0, elemPosition - window.pageYOffset - elemOffset / 4);
-  // if (window.pageYOffset < elemOffset) {
-  // }
-  // else if (window.pageYOffset > elemOffset) {
-  //   const elemPosition = elemOffset + window.pageYOffset;
-  //   window.scroll({
-  //     top: elemPosition - window.pageYOffset,
-  //   });
-  // }
+  const doc20PercentOfHeight = document.body.scrollHeight * 0.18;
+  const doc50PercentOfHeight = document.body.scrollHeight * 0.5;
+  const doc65PercentOfHeight = document.body.scrollHeight * 0.65;
+
+  const centerOfScreen = window.pageYOffset + window.innerHeight / 2;
+
+  // console.log('scrollHeight', document.body.scrollHeight);
+  if (centerOfScreen > doc65PercentOfHeight) {
+    makeActive('tech');
+  } else if (centerOfScreen > doc50PercentOfHeight) {
+    makeActive('about');
+  } else if (centerOfScreen > doc20PercentOfHeight) {
+    makeActive('projects');
+  } else {
+    makeActive('home');
+  }
+
+  // console.log('scrollHeight:', document.body.scrollHeight);
+  // console.log('window.pageYoffset', window.pageYOffset);
+  // console.log('window.innerHeight', window.innerHeight / 2);
+}
+scrollToElement();
+
+function makeActive(activeLink) {
+  const menuItem = document.querySelectorAll('.menu-item');
+  menuItem.forEach((item) => {
+    if (item.className.includes(activeLink)) {
+      item.classList.add('active-page-dark');
+    } else {
+      item.classList.remove('active-page-dark');
+    }
+  });
 }
 
 function isInViewport(element) {
