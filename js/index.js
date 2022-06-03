@@ -231,13 +231,16 @@ function scrollToElement(e) {
   //     html.offsetHeight
   //   );
   // console.log(height);
-  const doc20PercentOfHeight = document.body.scrollHeight * 0.15;
+  let doc20PercentOfHeight = document.body.scrollHeight * 0.18;
   const doc50PercentOfHeight = document.body.scrollHeight * 0.5;
   const doc65PercentOfHeight = document.body.scrollHeight * 0.65;
 
   const centerOfScreen = window.pageYOffset + window.innerHeight / 2;
 
-  // console.log('scrollHeight', document.body.scrollHeight);
+  if (window.innerWidth > 768) {
+    doc20PercentOfHeight = document.body.scrollHeight * 0.25;
+  }
+  console.log(doc20PercentOfHeight);
   if (centerOfScreen > doc65PercentOfHeight) {
     makeActive('tech');
   } else if (centerOfScreen > doc50PercentOfHeight) {
