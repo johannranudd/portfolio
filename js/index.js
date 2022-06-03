@@ -130,16 +130,16 @@ links.forEach((link) => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
     // console.log(window.pageYOffset);
-    if (link.dataset.scrollto === 'home') {
+    if (link.className.includes('home')) {
       window.scroll({
         top: 0,
       });
     }
 
-    if (link.dataset.scrollto === 'projects') {
+    if (link.className === 'projects') {
       scrollToProjects();
     }
-    if (link.dataset.scrollto === 'about') {
+    if (link.className.includes('about')) {
       const elemOffset = aboutSection.offsetTop;
       const elemPosition = elemOffset + window.pageYOffset;
 
@@ -179,7 +179,7 @@ links.forEach((link) => {
         });
       }
     }
-    if (link.dataset.scrollto === 'tech') {
+    if (link.className.includes('tech')) {
       const elemOffset = techSection.offsetTop;
       const elemPosition = elemOffset + window.pageYOffset;
 
