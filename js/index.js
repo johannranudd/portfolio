@@ -112,16 +112,19 @@ function fadeIn(element) {
 
 function scrollToProjects() {
   const canvasRect = vantaCanvas.getBoundingClientRect();
-
-  if (window.innerWidth > 768) {
-    window.scroll({
-      top: canvasRect.height / 2.15,
-    });
-  } else {
-    window.scroll({
-      top: canvasRect.height / 2.2,
-    });
-  }
+  window.scroll({
+    top: canvasRect.height / 2.15,
+  });
+  // if (window.innerWidth > 768) {
+  //   window.scroll({
+  //     top: canvasRect.height / 2.15,
+  //   });
+  // }
+  // else {
+  //   window.scroll({
+  //     top: canvasRect.height / 2.2,
+  //   });
+  // }
 }
 
 function isInViewport(element) {
