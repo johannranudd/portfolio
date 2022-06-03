@@ -119,7 +119,7 @@ function scrollToProjects() {
     });
   } else {
     window.scroll({
-      top: canvasRect.height / 2.25,
+      top: canvasRect.height / 2.2,
     });
   }
 }
