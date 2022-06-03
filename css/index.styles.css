@@ -183,7 +183,10 @@ main {
 }
 /* ***teach section*** */
 #tech-section {
-  padding-bottom: 10rem;
+  margin-bottom: 8rem;
+}
+.spacer {
+  height: 8rem;
 }
 .inner-tech-section {
   /* max-width: 500px; */
@@ -275,14 +278,14 @@ main {
   }
 }
 @media (min-width: 540px) {
+  .hero-text {
+    top: 0;
+  }
   .image-container .card p {
     transform: translate(10px, -15px);
   }
 }
 @media (min-width: 768px) {
-  .hero-text {
-    top: 0;
-  }
   /* projects section */
   #projects-section {
   }

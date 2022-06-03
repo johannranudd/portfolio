@@ -1,6 +1,7 @@
 const body = document.querySelector('body');
 // navbar
 const navbar = document.querySelector('.navbar');
+const links = document.querySelectorAll('.navbar a');
 const sectionCenter = document.querySelectorAll('.section-center');
 // hero section
 const vantaCanvas = document.querySelector('#vanta-canvas');
@@ -28,6 +29,7 @@ const aboutSectionBorderTop = document.querySelector(
 );
 // tech section
 const techSection = document.querySelector('#tech-section');
+const innerTechSection = document.querySelector('.inner-tech-section');
 const techHeadline = document.querySelector('#tech-section h2');
 const allTechLists = document.querySelectorAll('#tech-section ul');
 const techList = document.querySelector('.tech-list');
@@ -39,6 +41,7 @@ const techSectionH3 = document.querySelectorAll('#tech-section h3');
 
 // const projectsSection = document.querySelector('#projects-section');
 const main = document.querySelector('main');
+const footer = document.querySelector('footer');
 
 // eventlisteners
 window.addEventListener('scroll', parallaxScroll);
@@ -121,6 +124,42 @@ function scrollToProjects() {
   //     top: canvasRect.height / 2.2,
   //   });
   // }
+}
+links.forEach((link) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    // console.log(window.pageYOffset);
+    if (link.dataset.scrollto === 'home') {
+      window.scroll({
+        top: 0,
+      });
+    }
+    if (link.dataset.scrollto === 'projects') {
+      scrollToProjects();
+    }
+    if (link.dataset.scrollto === 'about') {
+      scrollToElement(aboutSection);
+    }
+    if (link.dataset.scrollto === 'tech') {
+      scrollToElement(techSection);
+    }
+  });
+});
+
+function scrollToElement(elem) {
+  // const aboutRect = aboutSection.getBoundingClientRect();
+  const aboutOffset = elem.offsetTop;
+  if (window.pageYOffset < aboutOffset) {
+    const elemPosition = aboutOffset - window.pageYOffset;
+    window.scroll({
+      top: elemPosition + window.pageYOffset,
+    });
+  } else if (window.pageYOffset > aboutOffset) {
+    const elemPosition = window.pageYOffset + aboutOffset;
+    window.scroll({
+      top: elemPosition - window.pageYOffset,
+    });
+  }
 }
 
 function isInViewport(element) {

@@ -17,15 +17,17 @@
   <body>
     <header class="navbar">
       <nav class="inner-navbar">
-        <a href="#" class="logo">
+        <a href="#" class="logo" data-scrollto="home">
           <div><i class="fa-solid fa-ship"></i> Logo</div>
         </a>
 
         <ul class="desktop-menu">
-          <li><a href="#" class="active-page-dark">Home</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Tech</a></li>
+          <li>
+            <a href="#" class="active-page-dark" data-scrollto="home">Home</a>
+          </li>
+          <li><a href="#" data-scrollto="projects">Projects</a></li>
+          <li><a href="#" data-scrollto="about">About</a></li>
+          <li><a href="#" data-scrollto="tech">Tech</a></li>
         </ul>
 
         <div class="menu-btn">
@@ -36,11 +38,11 @@
 
         <ul class="mobile-menu">
           <li>
-            <a href="#" class="active-page-mobile">Home</a>
+            <a href="#" class="active-page-mobile" data-scrollto="home">Home</a>
           </li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Tech</a></li>
+          <li><a href="#" data-scrollto="projects">Projects</a></li>
+          <li><a href="#" data-scrollto="about">About</a></li>
+          <li><a href="#" data-scrollto="tech">Tech</a></li>
         </ul>
       </nav>
     </header>
@@ -74,32 +76,68 @@
           ducimus blanditiis incidunt omnis
         </p>
         <div class="image-container">
-          <a href="#" class="card" data-rate="-0.4">
+          <a
+            href="https://next-pre-rendering-and-data-fetching.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="card"
+            data-rate="-0.4"
+          >
             <img src="./images/coffee-shop.png" alt="blucher" />
             <div class="backdrop"></div>
             <p>1Coffee mug store</p>
           </a>
-          <a href="#" class="card" data-rate="-1.2">
+          <a
+            href="https://johannblog.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="card"
+            data-rate="-1.2"
+          >
             <img src="./images/blog.png" alt="blucher" />
             <div class="backdrop"></div>
             <p>2Blog</p>
           </a>
-          <a href="#" class="card" data-rate="-1">
+          <a
+            href="https://epic-nobel-e9b8be.netlify.app/index.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="card"
+            data-rate="-1"
+          >
             <img src="./images/museum.png" alt="blucher" />
             <div class="backdrop"></div>
             <p>3Museum website</p>
           </a>
-          <a href="#" class="card" data-rate="-1.4">
+          <a
+            href="https://react-color-generator-johann-ranudd.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="card"
+            data-rate="-1.4"
+          >
             <img src="./images/color.png" alt="blucher" />
             <div class="backdrop"></div>
             <p>4Color generator</p>
           </a>
-          <a href="#" class="card" data-rate="-1.2">
+          <a
+            href="https://react-menu-johann-ranudd.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="card"
+            data-rate="-1.2"
+          >
             <img src="./images/menu.png" alt="blucher" />
             <div class="backdrop"></div>
             <p>5Restaurant menu</p>
           </a>
-          <a href="#" class="card" data-rate="-1.8">
+          <a
+            href="https://react-todo-app-johann-ranudd.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="card"
+            data-rate="-1.8"
+          >
             <img src="./images/todo.png" alt="blucher" />
             <div class="backdrop"></div>
             <p>6Todo app</p>
@@ -123,10 +161,16 @@
             </p>
             <p>Email: <strong>Johnrand380@gmail.com</strong></p>
             <div class="about-btn-container">
-              <a href="https://github.com/johannranudd"
+              <a
+                href="https://github.com/johannranudd"
+                target="_blank"
+                rel="noopener noreferrer"
                 ><i class="fa-brands fa-github"></i
               ></a>
-              <a href="https://www.linkedin.com/in/johann-ranudd/"
+              <a
+                href="https://www.linkedin.com/in/johann-ranudd/"
+                target="_blank"
+                rel="noopener noreferrer"
                 ><i class="fa-brands fa-linkedin"></i
               ></a>
             </div>
@@ -146,6 +190,7 @@
         </div>
       </div>
 
+      <div class="spacer"></div>
       <footer>This is a footer</footer>
     </main>
 
