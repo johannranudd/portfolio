@@ -173,7 +173,7 @@ links.forEach((link) => {
       });
       if (window.innerWidth >= 360) {
         window.scroll({
-          top: elemOffset - window.innerHeight / 1.2,
+          top: elemOffset - window.innerHeight * 0.5,
         });
       }
       if (window.innerWidth > 400) {
