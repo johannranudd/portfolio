@@ -46,7 +46,7 @@ const footer = document.querySelector('footer');
 
 // eventlisteners
 window.addEventListener('scroll', parallaxScroll);
-window.addEventListener('scroll', scrollToElement);
+window.addEventListener('scroll', highlightNavigation);
 window.addEventListener('resize', () => {
   if (window.innerWidth >= 1150 && window.innerWidth <= 1250) {
     parallaxScroll();
@@ -142,27 +142,45 @@ links.forEach((link) => {
     }
     if (link.className.includes('about')) {
       const elemOffset = aboutSection.offsetTop;
-      // console.log(elemOffset);
-      // console.log(window.pageYOffset);
-      // const elemPosition = elemOffset + window.pageYOffset;
-      // console.log(elemPosition);
-      // const aboutRect = aboutSection.getBoundingClientRect();
       window.scroll({
         top: elemOffset - window.innerWidth / 2,
       });
+      if (window.innerWidth > 360) {
+        window.scroll({
+          top: elemOffset - window.innerWidth / 2,
+        });
+      }
+      if (window.innerWidth > 380) {
+        window.scroll({
+          top: elemOffset - window.innerWidth,
+        });
+      }
       if (window.innerWidth > 541) {
         window.scroll({
           top: elemOffset + window.innerHeight / 6,
         });
       }
+      if (window.innerWidth > 768) {
+        window.scroll({
+          top: elemOffset + window.innerHeight / 10,
+        });
+      }
     }
     if (link.className.includes('tech')) {
       const elemOffset = techSection.offsetTop;
-      const techRect = techSection.getBoundingClientRect();
-      console.log(techRect.top);
       window.scroll({
-        top: elemOffset,
+        top: elemOffset - window.innerHeight / 2,
       });
+      if (window.innerWidth > 400) {
+        window.scroll({
+          top: elemOffset - window.innerHeight / 1.5,
+        });
+      }
+      if (window.innerWidth > 541) {
+        window.scroll({
+          top: elemOffset,
+        });
+      }
     }
   });
 });
@@ -174,30 +192,35 @@ function isInViewport(element) {
   }
 }
 
-function scrollToElement() {
-  let doc20PercentOfHeight = document.body.scrollHeight * 0.13;
-  const doc37PercentOfHeight = document.body.scrollHeight * 0.37;
-  const doc65PercentOfHeight = document.body.scrollHeight * 0.65;
+function highlightNavigation() {
+  let homePercentage = document.body.scrollHeight * 0.18;
+  let aboutPercentage = document.body.scrollHeight * 0.5;
+  let techPersentage = document.body.scrollHeight * 0.65;
   const centerOfScreen = window.pageYOffset + window.innerHeight / 2;
-  if (window.innerWidth > 530) {
-    doc20PercentOfHeight = document.body.scrollHeight * 0.18;
-  }
-  if (window.innerWidth > 768) {
-    doc20PercentOfHeight = document.body.scrollHeight * 0.25;
-  }
-  if (centerOfScreen > doc65PercentOfHeight) {
+
+  // if (window.innerWidth > 530) {
+  //   doc20PercentOfHeight = document.body.scrollHeight * 0.18;
+  // }
+  // if (window.innerWidth > 768) {
+  //   doc20PercentOfHeight = document.body.scrollHeight * 0.25;
+  // }
+  if (centerOfScreen > techPersentage) {
     makeActive('tech');
-  } else if (centerOfScreen > doc37PercentOfHeight) {
+    console.log('tech');
+  } else if (centerOfScreen > aboutPercentage) {
     makeActive('about');
-  } else if (centerOfScreen > doc20PercentOfHeight) {
+    console.log('about');
+  } else if (centerOfScreen > homePercentage) {
     makeActive('projects');
-  } else if (centerOfScreen < doc20PercentOfHeight) {
+    console.log('projects');
+  } else if (centerOfScreen < homePercentage) {
     makeActive('home');
+    console.log('home');
     // console.log('center of screen', centerOfScreen);
     // console.log('doc 20', doc20PercentOfHeight);
   }
 }
-scrollToElement();
+highlightNavigation();
 
 function makeActive(activeLink) {
   const menuItem = document.querySelectorAll('.menu-item');
