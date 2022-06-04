@@ -6,7 +6,7 @@
 }
 .hero-text {
   position: absolute;
-  top: 10px;
+  top: 0;
   left: 0;
   height: 100%;
   width: 100%;
@@ -305,9 +305,10 @@ main {
 @media (min-width: 1200px) {
   .hero-text {
     width: 90%;
-    left: 50%;
-    transform: translate(-50%);
+    margin: auto;
+    right: 0;
     max-width: 1200px;
+    text-align: left;
     justify-content: start;
   }
   .project-section-border-top {

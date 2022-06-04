@@ -8,6 +8,7 @@ const vantaCanvas = document.querySelector('#vanta-canvas');
 const emptyDiv = document.querySelector('.empty-div');
 const scrollBtn = document.querySelector('.scroll-btn');
 const heroTextContainer = document.querySelector('.hero-text');
+const headline = document.querySelector('.hero-text h1');
 // projects section
 const projectsSection = document.querySelector('#projects-section');
 const paragraph = document.querySelector('.paragraph');
@@ -53,15 +54,16 @@ window.addEventListener('resize', () => {
 });
 scrollBtn.addEventListener('click', scrollToProjects);
 
+let scroll = window.pageYOffset / 2;
 function parallaxScroll() {
-  let scroll = window.pageYOffset / 2;
+  scroll = window.pageYOffset / 2;
   emptyDiv.style.height = `${scroll}px`;
   main.style.transform = `translate3d(0px, -${scroll}px, 0px)`;
-  heroTextContainer.style.marginTop = `${scroll / 200}rem`;
+  heroTextContainer.style.transform = `translateY(${scroll / 1.6}px)`;
   //   add parallax
   if (window.innerWidth >= 1200) {
     images.forEach((image) => {
-      const position = (scroll * image.dataset.rate) / 3;
+      const position = (scroll * image.dataset.rate) / 2;
       image.style.transform = `translate3d(0px, ${position}px, 0px`;
     });
   }
@@ -119,10 +121,13 @@ function fadeIn(element) {
 
 function scrollToProjects() {
   const canvasRect = vantaCanvas.getBoundingClientRect();
+  const headlineRect = headline.getBoundingClientRect();
+
   window.scroll({
-    top: canvasRect.height / 2.15,
+    top: canvasRect.height / 1.5 - headlineRect.height,
   });
 }
+
 links.forEach((link) => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
