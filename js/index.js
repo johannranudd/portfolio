@@ -57,7 +57,7 @@ function parallaxScroll() {
   let scroll = window.pageYOffset;
   emptyDiv.style.height = `${scroll}px`;
   main.style.transform = `translate3d(0px, -${scroll}px, 0px)`;
-  heroTextContainer.style.marginTop = `${scroll / 200}rem`;
+  heroTextContainer.style.marginTop = `${scroll / 100}rem`;
   //   add parallax
   if (window.innerWidth >= 1200) {
     images.forEach((image) => {
