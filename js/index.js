@@ -147,7 +147,7 @@ links.forEach((link) => {
       });
       if (window.innerWidth >= 360) {
         window.scroll({
-          top: elemOffset - window.innerWidth * 0.7,
+          top: elemOffset - window.innerWidth * 0.5,
         });
       }
       if (window.innerWidth > 380) {
