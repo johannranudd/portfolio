@@ -142,88 +142,27 @@ links.forEach((link) => {
     }
     if (link.className.includes('about')) {
       const elemOffset = aboutSection.offsetTop;
-      const elemPosition = elemOffset + window.pageYOffset;
-
+      // console.log(elemOffset);
+      // console.log(window.pageYOffset);
+      // const elemPosition = elemOffset + window.pageYOffset;
+      // console.log(elemPosition);
+      // const aboutRect = aboutSection.getBoundingClientRect();
       window.scroll({
-        top: elemPosition - window.pageYOffset - elemOffset / 3.2,
+        top: elemOffset - window.innerWidth / 2,
       });
-
-      if (window.innerWidth > 340) {
+      if (window.innerWidth > 541) {
         window.scroll({
-          top: elemPosition - window.pageYOffset - elemOffset / 2.65,
-        });
-      }
-      if (window.innerWidth > 400) {
-        window.scroll({
-          top: elemPosition - window.pageYOffset - elemOffset / 3,
-        });
-      }
-      if (window.innerWidth >= 460) {
-        window.scroll({
-          top: elemPosition - window.pageYOffset - elemOffset / 2.8,
-        });
-      }
-      if (window.innerWidth >= 542) {
-        window.scroll({
-          top: elemPosition - window.pageYOffset - elemOffset / 8,
-        });
-      }
-      if (window.innerWidth > 767) {
-        window.scroll({
-          top: elemPosition - window.pageYOffset - elemOffset / 5,
-        });
-      }
-
-      if (window.innerWidth > 821) {
-        window.scroll({
-          top: elemPosition - window.pageYOffset,
-        });
-      }
-      if (window.innerWidth > 900) {
-        window.scroll({
-          top: elemPosition - window.pageYOffset - 40,
+          top: elemOffset + window.innerHeight / 6,
         });
       }
     }
     if (link.className.includes('tech')) {
       const elemOffset = techSection.offsetTop;
-      const elemPosition = elemOffset + window.pageYOffset;
-
+      const techRect = techSection.getBoundingClientRect();
+      console.log(techRect.top);
       window.scroll({
-        top: elemPosition - window.pageYOffset - elemOffset / 2.7,
+        top: elemOffset,
       });
-
-      if (window.innerWidth > 340) {
-        window.scroll({
-          top: elemPosition - window.pageYOffset - elemOffset / 2.47,
-        });
-      }
-      if (window.innerWidth > 400) {
-        window.scroll({
-          top: elemPosition - window.pageYOffset - elemOffset / 2.7,
-        });
-      }
-      if (window.innerWidth > 460) {
-        window.scroll({
-          top: elemPosition - window.pageYOffset - elemOffset / 2.65,
-        });
-      }
-      if (window.innerWidth >= 542) {
-        window.scroll({
-          top: elemPosition - window.pageYOffset - elemOffset / 3.6,
-        });
-      }
-      if (window.innerWidth > 767) {
-        window.scroll({
-          top: elemPosition - window.pageYOffset - elemOffset / 8,
-        });
-      }
-
-      if (window.innerWidth > 821) {
-        window.scroll({
-          top: elemPosition - window.pageYOffset - elemOffset / 4,
-        });
-      }
     }
   });
 });
