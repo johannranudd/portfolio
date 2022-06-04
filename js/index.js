@@ -59,7 +59,7 @@ function parallaxScroll() {
   scroll = window.pageYOffset / 2;
   emptyDiv.style.height = `${scroll}px`;
   main.style.transform = `translate3d(0px, -${scroll}px, 0px)`;
-  heroTextContainer.style.transform = `translateY(${scroll / 1.4}px)`;
+  heroTextContainer.style.transform = `translateY(${scroll / 1.5}px)`;
   if (window.innerWidth > 360) {
     heroTextContainer.style.transform = `translateY(${scroll / 1.6}px)`;
   }
