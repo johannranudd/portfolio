@@ -241,7 +241,7 @@ function scrollToElement() {
     makeActive('about');
   } else if (centerOfScreen > doc20PercentOfHeight) {
     makeActive('projects');
-  } else {
+  } else if (centerOfScreen < doc20PercentOfHeight) {
     makeActive('home');
   }
 }
