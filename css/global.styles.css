@@ -58,10 +58,6 @@ footer {
 }
 
 h1,
-h2 {
-}
-
-h1,
 h2,
 h4,
 h5,
@@ -91,7 +87,6 @@ button {
   background: transparent;
   border: none;
   cursor: pointer;
-  /* color: var(--clr-orange); */
 }
 
 .section-center {
@@ -104,12 +99,11 @@ button {
 
 .navbar {
   position: fixed;
+  top: 0;
   left: 0;
   right: 0;
   z-index: 99;
   background: var(--clr-white);
-  /* font-family: 'PT Mono', monospace; */
-  /* width: 100%; */
 }
 
 .inner-navbar {
@@ -144,10 +138,6 @@ button {
   overflow: hidden;
 }
 
-.mobile-menu li {
-  /* background: #fef; */
-}
-
 .mobile-menu a {
   position: relative;
   padding: 1rem;
@@ -166,7 +156,7 @@ button {
 .mobile-menu a:after {
   content: '';
   width: 0;
-  height: 1px;
+  height: 2px;
   background: var(--clr-orange);
   position: absolute;
   bottom: 0;
