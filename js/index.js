@@ -198,13 +198,12 @@ function isInViewport(element) {
 }
 
 function highlightNavigation() {
-  let homePercentage = document.body.scrollHeight * 0.18;
+  let homePercentage = document.body.scrollHeight * 0.16;
   let aboutPercentage = document.body.scrollHeight * 0.5;
   let techPersentage = document.body.scrollHeight * 0.65;
   const centerOfScreen = window.pageYOffset + window.innerHeight / 2;
 
   if (window.innerWidth >= 360) {
-    homePercentage = document.body.scrollHeight * 0.2;
     aboutPercentage = document.body.scrollHeight * 0.55;
     techPersentage = document.body.scrollHeight * 0.7;
   }
