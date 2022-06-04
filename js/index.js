@@ -144,7 +144,7 @@ links.forEach((link) => {
 
       if (window.innerWidth > 340) {
         window.scroll({
-          top: elemPosition - window.pageYOffset - elemOffset / 2.7,
+          top: elemPosition - window.pageYOffset - elemOffset / 2.65,
         });
       }
       if (window.innerWidth > 400) {
@@ -243,6 +243,8 @@ function scrollToElement() {
     makeActive('projects');
   } else if (centerOfScreen < doc20PercentOfHeight) {
     makeActive('home');
+    // console.log('center of screen', centerOfScreen);
+    // console.log('doc 20', doc20PercentOfHeight);
   }
 }
 scrollToElement();
