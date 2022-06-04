@@ -149,28 +149,33 @@ links.forEach((link) => {
       }
       if (window.innerWidth > 400) {
         window.scroll({
-          top: elemPosition - window.pageYOffset - elemOffset / 3.1,
+          top: elemPosition - window.pageYOffset - elemOffset / 3,
         });
       }
-      if (window.innerWidth > 460) {
+      if (window.innerWidth >= 460) {
         window.scroll({
-          top: elemPosition - window.pageYOffset - elemOffset / 3,
+          top: elemPosition - window.pageYOffset - elemOffset / 2.8,
         });
       }
       if (window.innerWidth >= 542) {
         window.scroll({
-          top: elemPosition - window.pageYOffset - elemOffset / 20,
+          top: elemPosition - window.pageYOffset - elemOffset / 8,
         });
       }
       if (window.innerWidth > 767) {
         window.scroll({
-          top: elemPosition - window.pageYOffset - elemOffset / 8,
+          top: elemPosition - window.pageYOffset - elemOffset / 5,
         });
       }
 
       if (window.innerWidth > 821) {
         window.scroll({
           top: elemPosition - window.pageYOffset,
+        });
+      }
+      if (window.innerWidth > 900) {
+        window.scroll({
+          top: elemPosition - window.pageYOffset - 40,
         });
       }
     }
