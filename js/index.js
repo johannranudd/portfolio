@@ -54,14 +54,14 @@ window.addEventListener('resize', () => {
 scrollBtn.addEventListener('click', scrollToProjects);
 
 function parallaxScroll() {
-  let scroll = window.pageYOffset;
+  let scroll = window.pageYOffset / 2;
   emptyDiv.style.height = `${scroll}px`;
   main.style.transform = `translate3d(0px, -${scroll}px, 0px)`;
   heroTextContainer.style.marginTop = `${scroll / 200}rem`;
   //   add parallax
   if (window.innerWidth >= 1200) {
     images.forEach((image) => {
-      const position = (window.pageYOffset * image.dataset.rate) / 3;
+      const position = (scroll * image.dataset.rate) / 3;
       image.style.transform = `translate3d(0px, ${position}px, 0px`;
     });
   }
