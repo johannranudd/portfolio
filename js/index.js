@@ -173,7 +173,7 @@ links.forEach((link) => {
       });
       if (window.innerWidth >= 360) {
         window.scroll({
-          top: elemOffset - window.innerHeight,
+          top: elemOffset - window.innerHeight / 2,
         });
       }
       if (window.innerWidth > 400) {
@@ -203,6 +203,10 @@ function highlightNavigation() {
   let techPersentage = document.body.scrollHeight * 0.65;
   const centerOfScreen = window.pageYOffset + window.innerHeight / 2;
 
+  if (window.innerWidth >= 360) {
+    aboutPercentage = document.body.scrollHeight * 0.55;
+    techPersentage = document.body.scrollHeight * 0.7;
+  }
   // if (window.innerWidth > 530) {
   //   doc20PercentOfHeight = document.body.scrollHeight * 0.18;
   // }
