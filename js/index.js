@@ -45,11 +45,11 @@ const footer = document.querySelector('footer');
 
 // eventlisteners
 window.addEventListener('scroll', parallaxScroll);
+window.addEventListener('scroll', scrollToElement);
 scrollBtn.addEventListener('click', scrollToProjects);
 
 function parallaxScroll(e) {
   const scroll = window.pageYOffset;
-  // console.log(scroll);
   emptyDiv.style.height = `${scroll}px`;
   main.style.transform = `translate3d(0px, -${scroll}px, 0px)`;
   heroTextContainer.style.marginTop = `${scroll / 200}rem`;
@@ -116,17 +116,10 @@ function scrollToProjects() {
   window.scroll({
     top: canvasRect.height / 2.15,
   });
-
-  // else {
-  //   window.scroll({
-  //     top: canvasRect.height / 2.2,
-  //   });
-  // }
 }
 links.forEach((link) => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
-    // console.log(window.pageYOffset);
     if (link.className.includes('home')) {
       window.scroll({
         top: 0,
@@ -219,28 +212,24 @@ links.forEach((link) => {
   });
 });
 
-window.addEventListener('scroll', scrollToElement);
-function scrollToElement(e) {
-  // let body = document.body,
-  //   html = document.documentElement,
-  //   height = Math.max(
-  //     body.scrollHeight,
-  //     body.offsetHeight,
-  //     html.clientHeight,
-  //     html.scrollHeight,
-  //     html.offsetHeight
-  //   );
-  // console.log(height);
+function isInViewport(element) {
+  const elementRect = element.getBoundingClientRect();
+  if (elementRect.top < window.innerHeight && elementRect.bottom > 0) {
+    return true;
+  }
+}
+
+function scrollToElement() {
   let doc20PercentOfHeight = document.body.scrollHeight * 0.13;
   const doc50PercentOfHeight = document.body.scrollHeight * 0.5;
   const doc65PercentOfHeight = document.body.scrollHeight * 0.65;
-
   const centerOfScreen = window.pageYOffset + window.innerHeight / 2;
-
+  if (window.innerWidth > 530) {
+    doc20PercentOfHeight = document.body.scrollHeight * 0.18;
+  }
   if (window.innerWidth > 768) {
     doc20PercentOfHeight = document.body.scrollHeight * 0.25;
   }
-  console.log(doc20PercentOfHeight);
   if (centerOfScreen > doc65PercentOfHeight) {
     makeActive('tech');
   } else if (centerOfScreen > doc50PercentOfHeight) {
@@ -250,10 +239,6 @@ function scrollToElement(e) {
   } else {
     makeActive('home');
   }
-
-  // console.log('scrollHeight:', document.body.scrollHeight);
-  // console.log('window.pageYoffset', window.pageYOffset);
-  // console.log('window.innerHeight', window.innerHeight / 2);
 }
 scrollToElement();
 
@@ -266,13 +251,6 @@ function makeActive(activeLink) {
       item.classList.remove('active-page-dark');
     }
   });
-}
-
-function isInViewport(element) {
-  const elementRect = element.getBoundingClientRect();
-  if (elementRect.top < window.innerHeight && elementRect.bottom > 0) {
-    return true;
-  }
 }
 
 async function displayTech() {
@@ -333,10 +311,21 @@ window.addEventListener('resize', () => {
   }
 });
 
-var docWidth = document.documentElement.offsetWidth;
+// var docWidth = document.documentElement.offsetWidth;
 
-[].forEach.call(document.querySelectorAll('*'), function (el) {
-  if (el.offsetWidth > docWidth) {
-    console.log(el);
-  }
-});
+// [].forEach.call(document.querySelectorAll('*'), function (el) {
+//   if (el.offsetWidth > docWidth) {
+//     console.log(el);
+//   }
+// });
+
+// let body = document.body,
+//   html = document.documentElement,
+//   height = Math.max(
+//     body.scrollHeight,
+//     body.offsetHeight,
+//     html.clientHeight,
+//     html.scrollHeight,
+//     html.offsetHeight
+//   );
+// console.log(height);
