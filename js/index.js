@@ -171,6 +171,11 @@ links.forEach((link) => {
       window.scroll({
         top: elemOffset - window.innerHeight / 2,
       });
+      if (window.innerWidth >= 360) {
+        window.scroll({
+          top: elemOffset - window.innerHeight,
+        });
+      }
       if (window.innerWidth > 400) {
         window.scroll({
           top: elemOffset - window.innerHeight / 1.5,
