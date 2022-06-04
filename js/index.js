@@ -46,14 +46,18 @@ const footer = document.querySelector('footer');
 // eventlisteners
 window.addEventListener('scroll', parallaxScroll);
 window.addEventListener('scroll', scrollToElement);
+window.addEventListener('resize', () => {
+  if (window.innerWidth >= 1150 && window.innerWidth <= 1250) {
+    parallaxScroll();
+  }
+});
 scrollBtn.addEventListener('click', scrollToProjects);
 
-function parallaxScroll(e) {
-  const scroll = window.pageYOffset;
+function parallaxScroll() {
+  let scroll = window.pageYOffset;
   emptyDiv.style.height = `${scroll}px`;
   main.style.transform = `translate3d(0px, -${scroll}px, 0px)`;
   heroTextContainer.style.marginTop = `${scroll / 200}rem`;
-
   //   add parallax
   if (window.innerWidth >= 1200) {
     images.forEach((image) => {
@@ -65,6 +69,7 @@ function parallaxScroll(e) {
   if (window.innerWidth < 1200) {
     // emptyDiv.style.height = `0px`;
     // main.style.transform = `translate3d(0px, 0px, 0px)`;
+    // console.log(scroll);
     images.forEach((image) => {
       image.style.transform = `translate3d(0px, 0px, 0px)`;
     });

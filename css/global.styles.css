@@ -1,14 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Poppins:wght@300&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Poppins:wght@300&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Acme&family=Archivo&family=Josefin+Sans&family=Kanit&family=Orbitron&family=PT+Mono&family=Press+Start+2P&family=Righteous&family=Rubik&family=Russo+One&family=Secular+One&family=Special+Elite&family=Teko&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=PT+Mono&family=Poppins&display=swap');
 
 /* font-family: 'Nunito', sans-serif; */
 /* font-family: 'Poppins', sans-serif; */
 
 :root {
+  /* pallete */
+  --clr-dark-blue: #041c34;
+  --clr-orange: #f38b8a;
+  --clr-light-blue: rgb(0, 242, 255);
+  --clr-body-bg: #fff;
+  /* pallete */
+
   --clr-blue: rgb(57, 128, 187);
   /* --clr-light-blue-gradiant: linear-gradient(135deg, #fef2e5 0%, #e2d1c3 100%); */
   --clr-black: #000;
   --clr-white: #fff;
-  --clr-orange: #c26610;
+  /* --clr-orange: #c26610; */
   --clr-alert: rgb(235, 107, 107);
   --clr-light-grey: rgba(0, 0, 0, 0.105);
   --box-shadow-1: rgba(0, 0, 0, 0.36) 0px 5px 15px;
@@ -29,8 +38,16 @@ html {
 
 body {
   position: relative;
-  font-family: 'Nunito', sans-serif;
-  /* font-family: 'Poppins', sans-serif; */
+
+  background-color: var(--clr-body-bg);
+
+  /* **font-setup** */
+  /* *headlines */
+  /* font-family: 'Josefin Sans', sans-serif; */
+  /* *text */
+  font-family: 'Poppins', sans-serif;
+  /* *code */
+  /* font-family: 'PT Mono', monospace; */
 }
 
 footer {
@@ -49,26 +66,15 @@ h2 {
   position: relative;
   text-align: center;
   padding: 3rem 0;
-  font-family: 'Poppins', sans-serif;
 }
 
-/* h2:after {
-  position: absolute;
-  bottom: 35%;
-  left: 50%;
-  transform: translateX(-50%);
-  content: '';
-  width: 300px;
-  height: 3px;
-  background: var(--clr-black);
-} */
-
-h2,
+h1,
 h2,
 h4,
 h5,
 h6 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
+  background: var(--clr-body-bg);
 }
 
 img {
@@ -109,6 +115,7 @@ button {
   right: 0;
   z-index: 99;
   background: var(--clr-white);
+  /* font-family: 'PT Mono', monospace; */
   /* width: 100%; */
 }
 
@@ -125,6 +132,10 @@ button {
 .logo {
   font-size: 1rem;
   color: var(--clr-black);
+}
+
+.navbar a:hover {
+  opacity: 0.8;
 }
 
 /* mobile menu */
