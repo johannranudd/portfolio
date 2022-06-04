@@ -14,10 +14,8 @@
   /* pallete */
 
   --clr-blue: rgb(57, 128, 187);
-  /* --clr-light-blue-gradiant: linear-gradient(135deg, #fef2e5 0%, #e2d1c3 100%); */
   --clr-black: #000;
   --clr-white: #fff;
-  /* --clr-orange: #c26610; */
   --clr-alert: rgb(235, 107, 107);
   --clr-light-grey: rgba(0, 0, 0, 0.105);
   --box-shadow-1: rgba(0, 0, 0, 0.36) 0px 5px 15px;
@@ -38,9 +36,7 @@ html {
 
 body {
   position: relative;
-
   background-color: var(--clr-body-bg);
-
   /* **font-setup** */
   /* *headlines */
   /* font-family: 'Josefin Sans', sans-serif; */
@@ -63,9 +59,6 @@ footer {
 
 h1,
 h2 {
-  position: relative;
-  text-align: center;
-  padding: 3rem 0;
 }
 
 h1,
