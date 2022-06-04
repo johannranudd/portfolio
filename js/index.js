@@ -139,12 +139,12 @@ links.forEach((link) => {
       const elemPosition = elemOffset + window.pageYOffset;
 
       window.scroll({
-        top: elemPosition - window.pageYOffset - elemOffset / 3.5,
+        top: elemPosition - window.pageYOffset - elemOffset / 3.2,
       });
 
       if (window.innerWidth > 340) {
         window.scroll({
-          top: elemPosition - window.pageYOffset - elemOffset / 2.8,
+          top: elemPosition - window.pageYOffset - elemOffset / 2.7,
         });
       }
       if (window.innerWidth > 400) {

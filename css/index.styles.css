@@ -230,6 +230,9 @@ main {
   padding-bottom: 2rem;
   opacity: 0;
 }
+#tech-section h4 {
+  background: transparent;
+}
 #tech-section ul {
 }
 #tech-section ul li {
