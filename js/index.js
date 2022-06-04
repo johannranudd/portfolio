@@ -59,7 +59,10 @@ function parallaxScroll() {
   scroll = window.pageYOffset / 2;
   emptyDiv.style.height = `${scroll}px`;
   main.style.transform = `translate3d(0px, -${scroll}px, 0px)`;
-  heroTextContainer.style.transform = `translateY(${scroll / 1.6}px)`;
+  heroTextContainer.style.transform = `translateY(${scroll / 1.4}px)`;
+  if (window.innerWidth > 360) {
+    heroTextContainer.style.transform = `translateY(${scroll / 1.6}px)`;
+  }
   //   add parallax
   if (window.innerWidth >= 1200) {
     images.forEach((image) => {
@@ -207,9 +210,9 @@ function highlightNavigation() {
     aboutPercentage = document.body.scrollHeight * 0.55;
     techPersentage = document.body.scrollHeight * 0.7;
   }
-  // if (window.innerWidth > 530) {
-  //   doc20PercentOfHeight = document.body.scrollHeight * 0.18;
-  // }
+  if (window.innerWidth > 530) {
+    homePercentage = document.body.scrollHeight * 0.2;
+  }
   // if (window.innerWidth > 768) {
   //   doc20PercentOfHeight = document.body.scrollHeight * 0.25;
   // }
