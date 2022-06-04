@@ -231,7 +231,7 @@ function isInViewport(element) {
 
 function scrollToElement() {
   let doc20PercentOfHeight = document.body.scrollHeight * 0.13;
-  const doc50PercentOfHeight = document.body.scrollHeight * 0.5;
+  const doc37PercentOfHeight = document.body.scrollHeight * 0.37;
   const doc65PercentOfHeight = document.body.scrollHeight * 0.65;
   const centerOfScreen = window.pageYOffset + window.innerHeight / 2;
   if (window.innerWidth > 530) {
@@ -242,7 +242,7 @@ function scrollToElement() {
   }
   if (centerOfScreen > doc65PercentOfHeight) {
     makeActive('tech');
-  } else if (centerOfScreen > doc50PercentOfHeight) {
+  } else if (centerOfScreen > doc37PercentOfHeight) {
     makeActive('about');
   } else if (centerOfScreen > doc20PercentOfHeight) {
     makeActive('projects');
