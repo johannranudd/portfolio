@@ -204,6 +204,7 @@ function highlightNavigation() {
   const centerOfScreen = window.pageYOffset + window.innerHeight / 2;
 
   if (window.innerWidth >= 360) {
+    homePercentage = document.body.scrollHeight * 0.2;
     aboutPercentage = document.body.scrollHeight * 0.55;
     techPersentage = document.body.scrollHeight * 0.7;
   }
