@@ -207,29 +207,19 @@ function highlightNavigation() {
   const centerOfScreen = window.pageYOffset + window.innerHeight / 2;
 
   if (window.innerWidth >= 360) {
-    aboutPercentage = document.body.scrollHeight * 0.55;
     techPersentage = document.body.scrollHeight * 0.7;
   }
   if (window.innerWidth > 530) {
     homePercentage = document.body.scrollHeight * 0.2;
   }
-  // if (window.innerWidth > 768) {
-  //   doc20PercentOfHeight = document.body.scrollHeight * 0.25;
-  // }
   if (centerOfScreen > techPersentage) {
     makeActive('tech');
-    console.log('tech');
   } else if (centerOfScreen > aboutPercentage) {
     makeActive('about');
-    console.log('about');
   } else if (centerOfScreen > homePercentage) {
     makeActive('projects');
-    console.log('projects');
   } else if (centerOfScreen < homePercentage) {
     makeActive('home');
-    console.log('home');
-    // console.log('center of screen', centerOfScreen);
-    // console.log('doc 20', doc20PercentOfHeight);
   }
 }
 highlightNavigation();
