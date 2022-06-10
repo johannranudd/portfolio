@@ -9,7 +9,7 @@
     {
       "id": 2,
       "name": "React.js",
-      "image": "./images/react.png",
+      "image": "./images/react-1-logo-crop.png",
       "status": "experience with"
     },
     {
@@ -27,25 +27,25 @@
     {
       "id": 5,
       "name": "HTML",
-      "image": "./images/html-rs-crop.jpg",
+      "image": "./images/html0-crop.jpg",
       "status": "experience with"
     },
     {
       "id": 6,
-      "name": "UX/UI",
-      "image": "./images/figma.png",
+      "name": "Figma",
+      "image": "./images/figma.jpg",
       "status": "experience with"
     },
     {
       "id": 7,
       "name": "WordPress",
-      "image": "./images/wp-rs-crop.jpg",
+      "image": "./images/wp.png",
       "status": "experience with"
     },
     {
       "id": 8,
       "name": "Node.js",
-      "image": "./images/node-rs-crop.jpg",
+      "image": "./images/node.png",
       "status": "want to know"
     },
     {
